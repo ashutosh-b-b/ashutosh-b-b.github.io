@@ -1,0 +1,34 @@
+{
+    "stories":[
+        {
+            "story_id": "Hijra",
+            "story_txt": "",
+            "story_img_url": "/assets/story_thumbnails/Hojra.jpeg",
+            "story_url":"https://medium.com/@a.bharambe123/hijra-5cf7e2760f09"
+        },
+        {
+            "story_id": "Assigmnent",
+            "story_txt": "",
+            "story_img_url": "../assets/story_thumbnails/Assignment.jpeg",
+            "story_url":"https://medium.com/@a.bharambe123/the-assignment-87ca4ffedd1b"
+        },
+        {
+            "story_id": "Manoranjan",
+            "story_txt": "",
+            "story_img_url": "../assets/story_thumbnails/manoranjan.jpeg",
+            "story_url":"https://medium.com/@a.bharambe123/manoranjan-9ad2946e079f"
+        },
+        {
+            "story_id": "Mehsoos",
+            "story_txt": "",
+            "story_img_url": "../assets/story_thumbnails/mehsoos.jpeg",
+            "story_url":"https://medium.com/@a.bharambe123/mehsoos-d196d28f06f4"
+        },
+        {
+            "story_id": "Yellow",
+            "story_txt": "",
+            "story_img_url": "../assets/story_thumbnails/Yellow.jpeg",
+            "story_url":"https://medium.com/@a.bharambe123/yellow-3a2234884551"
+        }
+    ]
+    }

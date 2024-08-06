@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Outfit');
+/* html {
+    scroll-behavior: smooth;
+  } */
+.hero-container{
+    width: 80%;
+    margin-top: 15%;
+    height: 22.5vw;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.profile-picture-container{
+    width: 28%;
+    height: 100%;
+}
+.profile-pic{
+    height: 22vw;
+    width: 100%;
+}
+.about-me-container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.namaste{
+    font-family: Pacifico;
+    font-size: 6vw;
+    color: #E36255;
+}
+.about-me-txt{
+    font-family: Outfit;
+    font-size: 1.6vw;
+    color: white;
+}
+
+/* .logos{
+    display: flex;
+    height: 5vh;
+    background-color: cadetblue;
+    flex-direction: row;
+
+}
+.visit-logo{
+    height: 100%;
+    width : 2%;
+    background-color: #E36255;
+} */
+/* @media only screen and (max-width: 768px) {
+    .namaste {font-size : 20px;}
+    .about-me-txt {font-size: 11px;}
+    .profile-pic { width: 100px; height: 100px;}
+    .profile-picture-container {width : 100px; height: 200px;}
+    .hero-container {height: 200px;}
+} */

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Outfit');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.exp-main-container{
+    width: 80%;
+    height: 40vw;
+    display: flex;
+    margin-left : 10%;
+    margin-right : 10%;
+    margin-top: 5%;
+    flex-direction: column;
+}
+.exp-head{
+    height: 5.625vw;
+    width: 100%;
+    text-align: left;
+    font-size: 5vw;
+    font-family: Oswald;
+    color: #8b86be;
+    font-weight: bold;
+
+}
+.experience-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 10%;
+    margin-top: 2%;
+    height: 16.875vw;
+}
+.experience-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.experience-time{
+    width: 25%;
+    border-right: solid 2px #9297c8;
+
+}
+.experience-title{
+    width: 37.5%;
+    border-right: solid 2px #9297c8;
+    margin-left: 1vw;
+}
+.experience-desc{
+    width: 37.5%;
+    margin-left: 1vw;
+}
+.experience-time, .experience-title, .experience-desc{
+
+    height: 100%;
+    color: white;
+    font-family: Outfit;
+    font-size: 1.4vw;
+    box-sizing: border-box;
+    padding: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* }
+.exp-timeline, .exp-title{
+    width: 37.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: solid 2px #9297c8;
+    margin-right: 2%;
+}
+.exp-timeline{
+    width : 25%;
+}
+.exp-desc{
+    width: 37.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.exp-txt{
+    font-family: Outfit;
+    font-size: 1.4vw;
+    text-align: left;
+    padding: 0.07vw;
+    width: 100%;
+    margin: 0.14vw;
+    color: white;
+} */

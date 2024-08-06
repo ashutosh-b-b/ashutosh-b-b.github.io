@@ -1,0 +1,50 @@
+.contact-bar-container{
+    width : 80%;
+    margin-left : 10%;
+    margin-right: 10%;
+    height: 3vw;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15%;
+
+}
+
+.logo-empty-container{
+    height: 100%;
+    width : 40%;
+}
+
+.logo-container{
+    width : 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.visit-logo{
+    height: 100%;
+    width : 100%;
+}
+
+.logo-link{
+    width: 8%;
+    height: 100%;
+    margin-right: 2%;
+}
+
+#github-logo{
+    background-image: url("../assets/github_logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#linkedin-logo{
+    background-image: url("../assets/linkedin_logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#mail-logo{
+    background-image: url("../assets/mail_logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}

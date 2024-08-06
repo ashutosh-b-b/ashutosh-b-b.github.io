@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.blogs-main-container{
+    width: 80%;
+    height: 50vw;
+    display: flex;
+    margin-left : 10%;
+    margin-right : 10%;
+    margin-top: 5%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blogs-head{
+    height: 5.625vw;
+    width: 100%;
+    text-align: left;
+    font-size: 5vw;
+    font-family: Oswald;
+    color: #e27396;
+    font-weight: bold;
+}
+
+.blogs-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 10%;
+    margin-top: 2%;
+    height: 40vw;
+    cursor: pointer;
+}
+
+
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40%;
+    height: 12vw;
+    background-color: black;
+    border-radius: 1vw;
+    padding: 2.5% 2.5%;
+    margin: 1%;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+  
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -2.5vw;
+      right: -2.5vw;
+      background: #e27396;
+      height: 5vw;
+      width: 5vw;
+      border-radius: 5vw;
+      transform: scale(1);
+      transform-origin: 50% 50%;
+      transition: transform 0.25s ease-out;
+    }
+  
+    &:hover:before {
+      transform: scale(21);
+    }
+  }
+  
+  .blog-card:hover {
+    .blog-head {
+      transition: all 0.3s ease-out;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .blog-description {
+      transition: all 0.3s ease-out;
+      color: #ffffff;
+    }
+  }
+  
+  .go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background-color: #e27396;
+    border-radius: 0 2vw 0 10vw;
+  }
+  
+  .go-arrow {
+    margin-top: -0.5vw;
+    margin-right: -0.5vw;
+    color: white;
+    font-family: courier, sans;
+    font-size: 1.5vw;
+  }
+
+  .blog-head{
+      height: 7vw;
+      font-size: 1.8vw;
+      font-weight: bold;
+      color: #e27396
+  }
+  .blog-description{
+      height: 5vw;
+      font-size: 1.2vw;
+      color: #ea9ab2
+  }
