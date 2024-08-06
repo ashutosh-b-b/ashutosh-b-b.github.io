@@ -3,7 +3,7 @@ import "../styles/navbar.css"
 function NavBar(props) {
   // Declare a new state variable, which we'll call "count"
   const [count, setCount] = useState(0);
-  const websitecolors = ["#E36255", "#8b86be", "#9AC1F0", "#e27396", "#a5ffd6"]
+  const websitecolors = ["#E36255", "#8b86be", "#70d6ff", "#e27396", "#a5ffd6"]
   const currentsection = props.sectionviews.findIndex((sectionview) => sectionview == true)
   const currentcolor = websitecolors[currentsection]
 
