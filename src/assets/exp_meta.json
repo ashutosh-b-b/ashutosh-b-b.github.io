@@ -1,0 +1,24 @@
+{
+    "experience":[
+        {
+            "time": "2021 - Present",
+            "title": "JuliaHub  - Software Developer ",
+            "desc": "Surrogate Models for Dynamical Systems"
+        },
+        {
+            "time": "May 2021 – July 2021",
+            "title": "Cisco Systems - Summer Intern",
+            "desc": "Prediction algorithms for router failures"
+        },
+        {
+            "time": "May 2021 – July 2021",
+            "title": "Google Summer of Code - NumFOCUS",
+            "desc": "Symbolic interfaces for Integro Partial Differential Eqns with PINNs"
+        },
+        {
+            "time": "June 2020 – August 2021",
+            "title": "Julia Seasons of Code - SciML",
+            "desc": "Deep learning methods for solving high dimensional PDEs"
+        }
+    ]
+    }
