@@ -1,0 +1,253 @@
+.project-main{
+    width: 80%;
+    height: 30vw;
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+}    
+.project-head{
+    height: 5vw;
+    width: 100%;
+    color : #70d6ff ;
+    font-size: 5vw;
+    font-family: Oswald;
+    font-weight: bold;
+    margin-bottom: 7.5vw;
+    
+}
+
+.projects-container{
+    height: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 28%;
+    // $numOfBlobs: 4;
+    // z-index: 1;
+    // /* background-color: #323332; */
+    // background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 40%, rgb(31, 31, 31) 100%);
+    // box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+    // transition: all .3s;
+
+    // // display: flex;
+    // // flex-direction: column;
+    // // justify-content: flex-start;
+    padding: 1vw;
+    margin-right: 2%;
+    // &:hover {
+    //     /* transition: all 0.2s ease-out;
+    //     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    //     top: -4px;
+    //     border: 0.5vw solid #70d6ff ; */
+    //     transform: scale(0.9);
+
+    //   }
+    
+      /* &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -16px;
+        right: -16px;
+        background: #00838d;
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        transform: scale(2);
+        transform-origin: 50% 50%;
+        transition: transform 0.15s ease-out;
+      }
+    
+      &:hover:before {
+        transform: scale(2.15);
+      } */
+}
+
+
+
+.card-head{
+    width: 100%;
+    height: 20%;
+    color : #70d6ff ;
+    font-size: 2vw;
+    // font-family: Oswald;
+    // font-weight: bold;
+    display: flex;
+    flex-direction: row;
+
+}
+.card-body{
+    width: 100%;
+    height: 65%;
+    // font-family: Oswald;
+    color: white;
+    font-size: 1.2vw;
+    // text-align: justify;
+    text-align: left;
+}
+.card-action{
+    width: 100%;
+    height: 15%;
+}
+// .card-btn{
+//     color: white; 
+//     height: 100%;
+//     background-color: ;
+//     width: 30%;
+//     font-family: Outfit;
+//     text-align: center;
+//     display: flex;
+//     flex-direction: column;
+//     font-size: 1vw;
+//     justify-content: space-around   ;
+//     border-radius: 1vw;
+// }
+.card-btn p{
+    height: 100%;
+}
+
+.card-head p{
+    height: 100%;
+}
+
+  
+  $cyan: #70d6ff;
+  $dark: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 40%, rgb(31, 31, 31) 100%);
+  $borderW: 0px;
+  
+
+
+
+.blob-btn {
+  $numOfBlobs: 6;
+  z-index: 1;
+  position: relative;
+//   padding: 1vw 2vw;
+  display: flex;
+  height: 15vw;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1vw;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+//   text-transform: uppercase;
+  // color: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 40%, rgb(31, 31, 31) 100%);
+//   font-size: 1vw;
+  font-weight: bold;
+  background-color: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 40%, rgb(31, 31, 31) 100%);
+//   outline: none;
+//   border: none;
+  transition: color 0.9s;
+  // border-radius: 2vw;
+  cursor: pointer;
+//   border-radius: 1.5px;
+  
+  &:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    // border: $borderW solid $cyan;
+    // border-radius:30px;
+    border: 0.5vw solid linear-gradient(170deg, rgba(58, 56, 56, 0.623) 40%, rgb(31, 31, 31) 70%);;
+    border-radius: 1vw;
+
+  }
+  
+  &:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: $borderW*1.5;
+    top: $borderW*1.5;
+    width: 100%;
+    height: 100%;
+
+    transition: all 0.8s 0.7s;
+    // border-radius:30px;
+    border: 0.5vw solid linear-gradient(170deg, rgba(58, 56, 56, 0.623) 40%, rgb(31, 31, 31) 70%);;
+    border-radius: 1vw;
+
+  }
+  
+  &:hover {
+    color: $dark;
+    border-radius: 1vw;
+
+    &:after {
+      transition: all 0.8s;
+      left: 0;
+      top: 0;
+      border: 0.5vw solid linear-gradient(170deg, rgba(58, 56, 56, 0.623) 40%, rgb(31, 31, 31) 70%);;
+      border-radius: 1vw;
+
+    }
+  }
+  
+  &__inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    // border-radius:30px;
+    border: 0.5vw solid linear-gradient(170deg, rgba(58, 56, 56, 0.623) 40%, rgb(31, 31, 31) 70%);;
+    border-radius: 1vw;
+    background:linear-gradient(170deg, rgba(58, 56, 56, 0.623) 40%, rgb(31, 31, 31) 70%);;
+  }
+  
+  // additional container created, because in FF blobs are breaking overflow:hidden of element with svg gooey filter
+  &__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url('#goo');
+  }
+  
+  &__blob {
+    position: absolute;
+    top: $borderW;
+    width: 100% / $numOfBlobs;
+    height: 100%;
+    background: $cyan;
+    border-radius: 100%;
+    transform: translate3d(0,150%,0) scale(1.7);
+    transition: transform 0.5s;
+    
+    @supports(filter: url('#goo')) {
+      transform: translate3d(0,150%,0) scale(1.4);
+    }
+    
+    @for $i from 1 through $numOfBlobs {
+      &:nth-child(#{$i}) {
+        left: ($i - 1) * (120% / $numOfBlobs);
+        transition-delay: ($i - 1) * 0.04s;
+      }
+    }
+    
+    .blob-btn:hover & {
+      transform: translateZ(0) scale(1.7);
+      @supports(filter: url('#goo')) {
+        transform: translateZ(0) scale(1.4);
+      }
+    }
+  }
+  
+}
+
+.blob-btn:hover .card-head{
+    color: black;
+}
+
+.blob-btn:hover .card-body{
+    color: black;
+}
