@@ -117,7 +117,8 @@
     .blogs-container{
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
+      padding-right: 10%;
       flex-wrap: nowrap;
       margin-right: 0%;
       margin-top: 2%;
@@ -135,6 +136,9 @@
       width: 100%;
       cursor: pointer;
       margin-right: 0%;
+  }
+  .blogs-container::-webkit-scrollbar {
+    display: none;
   }
   .blog-card-new{
     width: 100%;

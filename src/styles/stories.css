@@ -96,13 +96,16 @@
         scroll-snap-type: x mandatory;
         margin-top: 10%;
     }
+    .story-carousel-container::-webkit-scrollbar {
+        display: none;
+      }
     .stories-container{
         /* flex-shrink: 0; */
-        height: 150vw;
+        height: 100vw;
     }
     .story-container:hover,
     .story-container{
-        height: 50vw;
+        height: 40vw;
         flex-shrink: 0;
         width: 80%;
         z-index: 5;
@@ -132,7 +135,7 @@
 
     }
     .stories-head{
-        height: 20vw;
+        height: 16vw;
         font-size: 15vw;
         text-align: center;
     }

@@ -465,6 +465,8 @@
   .blob-btn.hover .card-body{
     color: #1f1f1f;
 }
-
+.projects-container::-webkit-scrollbar {
+  display: none;
+}
 
 }
