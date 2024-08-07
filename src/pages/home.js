@@ -8,9 +8,9 @@ import MediaCard from '../components/projects.js'
 
 import Blogs from '../components/blogs.js'
 import StoriesCarousel from '../components/stories.js'
-
+import HomeButton from '../components/homebutton.js';
 import { useInView } from "react-intersection-observer";
-
+import useCheckMobileScreen from '../components/useMobileCheck.js';
 
 import "../styles/home.css"
 
@@ -23,6 +23,8 @@ function Home() {
   const [section4Ref, section4InView, section4Entry] = useInView({ threshold: 0.5 });
   const [section5Ref, section5InView, section5Entry] = useInView({ threshold: 0.5 });
 
+  const sectionViews=[section1InView, section2InView, section3InView, section4InView, section5InView]
+  const sectionEntries = [section1Entry, section2Entry, section3Entry, section4Entry, section5Entry]
 
   return (
     <div>
@@ -32,20 +34,21 @@ function Home() {
       ></NavBar>
       <div class = "body-wrapper">
         <section className='section-container' ref = {section1Ref}> 
-          <Hero></Hero>
-          <ContactBar></ContactBar>
+          <Hero allSectionViews={sectionViews} allSectionEntries={sectionEntries}></Hero>
+          <ContactBar allSectionViews={sectionViews} allSectionEntries={sectionEntries}></ContactBar>
+          {useCheckMobileScreen() && <HomeButton allSectionEntries={sectionEntries}></HomeButton>}
         </section>
-        <section className='section-container' ref = {section2Ref}>
-          <Experience></Experience>
+        <section className='section-container' ref = {section2Ref} allSectionViews={sectionViews} allSectionEntries={sectionEntries}>
+          <Experience allSectionViews={sectionViews} allSectionEntries={sectionEntries}></Experience>
         </section>
-        <section className='section-container' id = "project-section" ref = {section3Ref}>
-          <MediaCard />
+        <section className='section-container' id = "project-section" ref = {section3Ref} allSectionViews={sectionViews} allSectionEntries={sectionEntries}>
+          <MediaCard allSectionViews={sectionViews} allSectionEntries={sectionEntries} />
         </section>
-        <section className='section-container' id = "blog-section" ref = {section4Ref}>
-          <Blogs />
+        <section className='section-container' id = "blog-section" ref = {section4Ref} allSectionViews={sectionViews} allSectionEntries={sectionEntries}>
+          <Blogs allSectionViews={sectionViews} allSectionEntries={sectionEntries} />
         </section>
-        <section className='section-container' id = "stories-section" ref = {section5Ref}>
-          <StoriesCarousel />
+        <section className='section-container' id = "stories-section" ref = {section5Ref} allSectionViews={sectionViews} allSectionEntries={sectionEntries}>
+          <StoriesCarousel allSectionViews={sectionViews} allSectionEntries={sectionEntries}/>
         </section>
       </div>
     </div>

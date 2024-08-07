@@ -26,3 +26,15 @@
     /* border-radius: 0.8vw; */
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1000px) {
+    .navbar-container{
+        height: 8vw;
+    }
+    .navbar-option{
+        height: 5vw;
+        font-size: 4vw;
+        width: 20%;
+        padding: 1%;
+    }
+   }

@@ -1,0 +1,24 @@
+{
+"blogs":[
+    {
+        "blog_head": "JSoC 2020 : Differential Equations and Neural Networks",
+        "blog_txt": "Solving high dimensional Partial Differential Equations with Deep Learning and more.",
+        "blog_url":"https://nextjournal.com/ashutosh-b-b/jsoc-2020-working-with-differential-equations-and-neural-networks"
+    },
+    {
+        "blog_head": "GSOC 2021 : Adding Symbolic Integral",
+        "blog_txt": "Addition of Symbolic Integral to the ModelingToolkit.jl ",
+        "blog_url":"https://nextjournal.com/ashutosh-b-b/gsoc-1"
+    },
+    {
+        "blog_head": "GSOC 2021 : Evaluation of the Symbolic Integral",
+        "blog_txt": "Using the Numeric Integral and solving simple equations",
+        "blog_url":"https://nextjournal.com/ashutosh-b-b/gsoc-2"
+    },
+    {
+        "blog_head": "GSOC 2021 : Multi Dimensional Integral and Integro Differential Equations",
+        "blog_txt": "Numerically solving a multidimensional integral, extending support to PINNs to solve integro differential equations.",
+        "blog_url":"https://nextjournal.com/ashutosh-b-b/gsoc-3"
+    }
+]
+}

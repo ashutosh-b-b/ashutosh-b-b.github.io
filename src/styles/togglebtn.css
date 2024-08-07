@@ -1,0 +1,65 @@
+.toggle-button-container{
+    height: 21vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .toggle-button{
+    height: 100%;
+    width: 7vw;
+    /* background-color: #70d6ff; */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .vertical-button{
+      height: 7vw;
+      width: 7w;
+  }
+  .toggle-button-vertical{
+      height: 21vw;
+      width: 7vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .toggle-button-txt{
+    text-align: center;
+    /* font-size: 8.7vw; */
+    /* font-weight: 900; */
+    height: 7vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toggle-button-svg-active{
+    height: 80%;
+    width: 90%;
+   }
+
+   #toggle-button-projects{
+    filter: invert(88%) sepia(17%) saturate(6847%) hue-rotate(171deg) brightness(102%) contrast(104%);
+   }
+   #toggle-button-blogs{
+    filter: invert(75%) sepia(29%) saturate(6517%) hue-rotate(300deg) brightness(99%) contrast(79%);
+   }
+   #toggle-button-stories{
+    filter: invert(91%) sepia(96%) saturate(271%) hue-rotate(71deg) brightness(99%) contrast(106%);
+   }
+   #home-button{
+    filter: invert(41%) sepia(35%) saturate(1410%) hue-rotate(322deg) brightness(108%) contrast(78%);
+    height: 150%;
+    width: 150%;
+   }
+   #toggle-button-exp{
+    filter: invert(74%) sepia(10%) saturate(6075%) hue-rotate(199deg) brightness(82%) contrast(75%);
+   }
+   .toggle-button-svg-inactive{
+    height: 80%;
+    width: 90%;
+    filter: invert(28%) sepia(6%) saturate(316%) hue-rotate(83deg) brightness(93%) contrast(90%);
+   }

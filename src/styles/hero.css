@@ -57,3 +57,24 @@
     .profile-picture-container {width : 100px; height: 200px;}
     .hero-container {height: 200px;}
 } */
+
+@media only screen and (max-width: 1000px) {
+    .hero-container{
+        display: flex;
+        flex-direction: row;
+        height: 80vw;
+    }
+    .about-me-container{
+        height: 80vw;
+        width: 65%;
+    }
+    .namaste{
+        height: 20vw;
+        font-size: 12vw;
+    }
+    .about-me-txt{
+        margin-top: 8vw;
+        margin-left: -38%;
+        font-size: 4vw;
+    }
+  }

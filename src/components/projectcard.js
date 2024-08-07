@@ -4,12 +4,12 @@ import "../styles/projects.scss"
 
 export default function ProjectCard(props) {
     return(
-        <div className = "card" id = "card-1">
-            <div class="blob-btn">
+        <div className = "card" id = {props.additional_id} >
+            <div className={"blob-btn" + props.class_addon} >
             <div className = "card-head"><div>{props.head}</div></div>
           <div className = "card-body">{props.body}</div>
 
-              <span class="blob-btn__inner">
+              <span class="blob-btn__inner" ref = {props.projref}>
                 <span class="blob-btn__blobs">
                   <span class="blob-btn__blob"></span>
                   <span class="blob-btn__blob"></span>

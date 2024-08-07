@@ -86,3 +86,27 @@
     margin: 0.14vw;
     color: white;
 } */
+
+@media only screen and (max-width: 1000px) {
+   .exp-main-container{
+       height: 120vw;
+   }
+
+   .experience-container{
+       height: 60vw;
+       margin-bottom: 15%;
+       margin-left: 15%;
+   }
+   .experience-row{
+       height: 16vw;
+   }
+   .experience-time, .experience-title, .experience-desc{
+        font-size: 2.5vw;
+    }
+    .exp-head{
+        height: 20vw;
+        font-size: 15vw;
+        text-align: center;
+        margin-bottom: 10%;
+    }
+  }
