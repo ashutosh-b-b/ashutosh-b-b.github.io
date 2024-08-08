@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import NavBar from '../components/navbar.js'
 import Hero from '../components/hero.js'
 import Experience from '../components/experience.js'
-
+import Experience2 from '../components/experience2.js';
 import ContactBar from '../components/contactbar'
 import MediaCard from '../components/projects.js'
+import ExperienceMob from '../components/experience_mob.js';
 
 import Blogs from '../components/blogs.js'
 import StoriesCarousel from '../components/stories.js'
@@ -38,15 +39,23 @@ function Home() {
           <ContactBar allSectionViews={sectionViews} allSectionEntries={sectionEntries}></ContactBar>
           {useCheckMobileScreen() && <HomeButton id = {isSafari ? "-safari" : ""} allSectionEntries={sectionEntries}></HomeButton>}
         </section>
+
         <section className='section-container' ref = {section2Ref} allSectionViews={sectionViews} allSectionEntries={sectionEntries}>
-          <Experience allSectionViews={sectionViews} allSectionEntries={sectionEntries}></Experience>
+          {
+            useCheckMobileScreen() ? 
+              <ExperienceMob allSectionViews={sectionViews} allSectionEntries={sectionEntries}></ExperienceMob> : 
+              <Experience2 allSectionViews={sectionViews} allSectionEntries={sectionEntries}></Experience2>
+          }
         </section>
+
         <section className='section-container' id = "project-section" ref = {section3Ref} allSectionViews={sectionViews} allSectionEntries={sectionEntries}>
           <MediaCard allSectionViews={sectionViews} allSectionEntries={sectionEntries} />
         </section>
+
         <section className='section-container' id = "blog-section" ref = {section4Ref} allSectionViews={sectionViews} allSectionEntries={sectionEntries}>
           <Blogs allSectionViews={sectionViews} allSectionEntries={sectionEntries} />
         </section>
+
         <section className='section-container' id = "stories-section" ref = {section5Ref} allSectionViews={sectionViews} allSectionEntries={sectionEntries}>
           <StoriesCarousel allSectionViews={sectionViews} allSectionEntries={sectionEntries}/>
         </section>
