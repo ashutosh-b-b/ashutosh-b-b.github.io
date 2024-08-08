@@ -20,7 +20,7 @@ function ExperienceMob(props) {
     const current_exp = expsViews.findIndex(i => i == true)
     console.log(current_exp)
     return(
-        <div className='exp-main-container'>
+        <div className='exp-main-container-mob'>
 
             <div className='exp-head-mob'>Experience</div>    
 

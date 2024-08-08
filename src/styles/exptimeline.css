@@ -120,7 +120,7 @@
 .exp-card-content{
     height: 70%;
     width: 100%;
-    background: black;
+    background: #141414;
     border-radius: 2vw;
     display: flex;
     box-shadow: 0 25px 50px rgba(0,0,0,0.55);
