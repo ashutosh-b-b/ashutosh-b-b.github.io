@@ -8,7 +8,7 @@ import { useRef,  useEffect, useCallback, useState} from "react";
 import { useInView } from "react-intersection-observer";
 import { getThemeProps } from '@mui/system';
 import { useSlotProps } from '@mui/base';
-
+import { isSafari } from 'react-device-detect';
 export default function ProjectBar(props) {
   const onMobile = useCheckMobileScreen()
 
@@ -42,7 +42,7 @@ export default function ProjectBar(props) {
         />
        
     </div>
-      {onMobile && <ToggleButton id={"toggle-button-projects"} entries={[project1Entry, project2Entry, project3Entry]} views={[project1InView, project2InView, project3InView]} allSectionViews={props.allSectionViews} allSectionEntries={props.allSectionEntries}></ToggleButton>}
+      {onMobile && <ToggleButton id={!isSafari ? "toggle-button-projects" : "toggle-button-projects-safari"} entries={[project1Entry, project2Entry, project3Entry]} views={[project1InView, project2InView, project3InView]} allSectionViews={props.allSectionViews} allSectionEntries={props.allSectionEntries}></ToggleButton>}
     </div>
 
 

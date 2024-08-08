@@ -3,6 +3,7 @@ import "../styles/experience.css"
 import expdata from "../assets/exp_meta.json";
 import useCheckMobileScreen from './useMobileCheck';
 import ToggleButton from './toggle_button';
+import { isSafari } from 'react-device-detect';
 function Experience(props) {
   // Declare a new state variable, which we'll call "count"
 
@@ -23,7 +24,7 @@ function Experience(props) {
         ))}
 
         </div>
-        {useCheckMobileScreen() && <ToggleButton id={"toggle-button-exp"} entries={[]} views={[]} allSectionViews={props.allSectionViews} allSectionEntries={props.allSectionEntries}></ToggleButton>}
+        {useCheckMobileScreen() && <ToggleButton id={!isSafari ? "toggle-button-exp" : "toggle-button-exp-safari"} entries={[]} views={[]} allSectionViews={props.allSectionViews} allSectionEntries={props.allSectionEntries}></ToggleButton>}
     </div>
 
   );

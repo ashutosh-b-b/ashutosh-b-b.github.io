@@ -11,7 +11,7 @@ import StoriesCarousel from '../components/stories.js'
 import HomeButton from '../components/homebutton.js';
 import { useInView } from "react-intersection-observer";
 import useCheckMobileScreen from '../components/useMobileCheck.js';
-
+import { isSafari } from 'react-device-detect';
 import "../styles/home.css"
 
 function Home() {
@@ -36,7 +36,7 @@ function Home() {
         <section className='section-container' ref = {section1Ref}> 
           <Hero allSectionViews={sectionViews} allSectionEntries={sectionEntries}></Hero>
           <ContactBar allSectionViews={sectionViews} allSectionEntries={sectionEntries}></ContactBar>
-          {useCheckMobileScreen() && <HomeButton allSectionEntries={sectionEntries}></HomeButton>}
+          {useCheckMobileScreen() && <HomeButton id = {isSafari ? "-safari" : ""} allSectionEntries={sectionEntries}></HomeButton>}
         </section>
         <section className='section-container' ref = {section2Ref} allSectionViews={sectionViews} allSectionEntries={sectionEntries}>
           <Experience allSectionViews={sectionViews} allSectionEntries={sectionEntries}></Experience>

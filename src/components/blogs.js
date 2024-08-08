@@ -5,7 +5,7 @@ import BlogCard from "./blog_card"
 import ToggleButton from './toggle_button';
 import useCheckMobileScreen from './useMobileCheck'
 import { useInView } from "react-intersection-observer";
-
+import { isSafari } from 'react-device-detect';
 function Blog(props) {
   // Declare a new state variable, which we'll call "count"
   const [blog1Ref, blog1InView, blog1Entry] = useInView({ threshold: 0.8 });
@@ -29,7 +29,7 @@ function Blog(props) {
             ))}
 
     </div>
-    {onMobile && <ToggleButton id={"toggle-button-blogs"} entries={blogsEntries} views={blogViews} allSectionViews={props.allSectionViews} allSectionEntries={props.allSectionEntries}></ToggleButton>}
+    {onMobile && <ToggleButton id={!isSafari ? "toggle-button-blogs" : "toggle-button-blogs-safari"} entries={blogsEntries} views={blogViews} allSectionViews={props.allSectionViews} allSectionEntries={props.allSectionEntries}></ToggleButton>}
     </div>
 
   );

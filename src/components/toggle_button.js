@@ -9,7 +9,6 @@ export default function ToggleButton(props) {
     const maxLengthVertical = props.allSectionEntries.length
     const scroll_inline_right = props.id == "toggle-button-stories" ? 'start' : 'center'
     const scroll_inline_left = props.id == "toggle-button-stories" ? 'end' : 'center'
-
     function moveRight(e){
         if((current_idx + 1)== maxLengthHorizontal){
             return null
@@ -17,12 +16,16 @@ export default function ToggleButton(props) {
         props.entries[current_idx + 1].target.scrollIntoView({ behavior: 'smooth', block: 'center', inline: scroll_inline_right })
         // props.entries[current_idx + 1].target.scroll({left: '1000'})
     }
+    const finalmoveRight = props.moveRight ? props.moveRight : moveRight
+
     function moveLeft(e){
         if(current_idx == 0){
             return null
         }
         props.entries[current_idx - 1].target.scrollIntoView({ behavior: 'smooth', block: 'center', inline: scroll_inline_left })
     }
+    const finalmoveLeft = props.moveLeft ? props.moveLeft : moveLeft
+
     function moveUp(e){
         if(btn_active.up){
           props.allSectionEntries[current_section-1].target.scrollIntoView({behavior: 'smooth'})
@@ -42,7 +45,7 @@ export default function ToggleButton(props) {
     return(
     <div className="toggle-button-container">
         <div className = "toggle-button" style={{backgroundColor: props.color }}>
-          <div className='toggle-button-txt' onClick={(e) => moveLeft(e)}>
+          <div className='toggle-button-txt' onClick={finalmoveLeft}>
             <img src="/assets/leftarrow.svg" id={btn_active.left ? props.id: ""} class={btn_active.left ? "toggle-button-svg-active" : "toggle-button-svg-inactive"}/>
           </div>
         </div>
@@ -59,7 +62,7 @@ export default function ToggleButton(props) {
         </div>
         </div>
 
-        <div className = "toggle-button" style={{backgroundColor: props.color}} onClick={moveRight}>
+        <div className = "toggle-button" style={{backgroundColor: props.color}} onClick={finalmoveRight}>
           <div className='toggle-button-txt'>
             <img src="/assets/rightarrow2.svg" id={btn_active.right ? props.id: ""} class={btn_active.right ? "toggle-button-svg-active" : "toggle-button-svg-inactive"}/>
           </div>

@@ -12,7 +12,7 @@ export default function HomeButton(props) {
 
         <div className = "toggle-button vertical-button">
           <div className='toggle-button-txt' onClick={moveDown}>
-            <img src="/assets/downarrow.svg" id="home-button" class="toggle-button-svg-active"/>
+            <img src="/assets/downarrow.svg" id={"home-button" + props.id} class="toggle-button-svg-active"/>
           </div>
         </div>
       </div>

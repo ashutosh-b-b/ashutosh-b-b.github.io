@@ -8,6 +8,8 @@ import useCheckMobileScreen from './useMobileCheck'
 import { useInView } from "react-intersection-observer";
 import {useState} from 'react'
 import ToggleButton from './toggle_button';
+import { useRef } from 'react';
+import { isSafari } from 'react-device-detect';
 export default function StoriesCarousel(props) {
 
     const [currentSection,setCurrentSection] =useState(0)
@@ -29,10 +31,12 @@ export default function StoriesCarousel(props) {
     // const storiesRef = allInViewProps.map((inViewProp) => inViewProp[0])
     // const storiesEntries = allInViewProps.map((inViewProp) => inViewProp[2])
     // const storiesViews = allInViewProps.map((inViewProp) => inViewProp[1])
+    const carousel_ref = useRef()
     const current_story = storiesViews.findIndex((s) => s == true)
 
     function updateCurrentSection(e){
-        console.log(current_story)
+        console.log(e.target.scrollLeft)
+        console.log("offeset: " + storiesEntries[currentSection].target.offsetLeft + " width: " + storiesEntries[currentSection].target.offsetWidth)
         if(current_story == -1){
             return null
         }else{
@@ -41,12 +45,37 @@ export default function StoriesCarousel(props) {
         // console.log(currentSection)
     }
     const onMobile = useCheckMobileScreen()
+    function customMoveLeft(e){
+        if(currentSection == 0){
+            return null
+        }
+        const offsetLeft = storiesEntries[currentSection - 1].target.offsetLeft;
+        const width = storiesEntries[currentSection - 1].target.offsetWidth;
+        carousel_ref.current.scrollTo({left: offsetLeft - 0.3*width})
+    }
+
+    function customMoveRight(e){
+        if(currentSection == storiesEntries.length - 1){
+            return null
+        }
+        
+        const offsetRight = storiesEntries[currentSection + 1].target.offsetLeft;
+        const width = storiesEntries[currentSection + 1].target.offsetWidth;
+        console.log("current: " + currentSection + " " + (storiesEntries.length - 2))
+        // if(currentSection == storiesEntries.length - 2){
+        //     console.log("hello!!")
+        //     console.log(offsetRight)
+        //     carousel_ref.current.scrollTo({right: 1396   })
+        //     return null 
+        // }
+        carousel_ref.current.scrollTo({left: offsetRight - 0.3*width})
+    }
     return(
         <div className = "stories-container">
         <div className = "stories-head">
             My Stories
         </div>
-        <div className = "story-carousel-container" onScroll={updateCurrentSection}>
+        <div className = "story-carousel-container" onScroll={updateCurrentSection} ref={carousel_ref}>
             
             {/* <div className = "story-container" onMouseOver={MouseOver} onMouseOut={MouseOut}></div>
             <div className = "story-container" onMouseOver={MouseOver} onMouseOut={MouseOut}></div>
@@ -57,19 +86,19 @@ export default function StoriesCarousel(props) {
                 story_head = {item.story_id} 
                 story_url = {item.story_url} 
                 story_ref = {storiesRef[idx]}     
-                id = {idx}
+                id = {"story-container-"+ idx}
                 class_addon = {
                     !onMobile ? "" : 
                     currentSection == idx ? "" :
                     currentSection < idx  ? " not-focused-right" :
                     currentSection > idx  ? " not-focused-left" : 
                     "" 
-                    
-                }           
+                }
                 ></StoryCard>
             ))}
+        {onMobile && <div className='story-container-buffer'></div>}
         </div>
-        {onMobile && <ToggleButton id={"toggle-button-stories"} entries={storiesEntries} views={storiesViews} allSectionViews={props.allSectionViews} allSectionEntries={props.allSectionEntries} current_idx={currentSection}></ToggleButton>}
+        {onMobile && <ToggleButton id={!isSafari ? "toggle-button-stories" : "toggle-button-stories-safari"} entries={storiesEntries} views={storiesViews} allSectionViews={props.allSectionViews} allSectionEntries={props.allSectionEntries} current_idx={currentSection} moveLeft={customMoveLeft} moveRight={customMoveRight}></ToggleButton>}
 
         </div>
 
