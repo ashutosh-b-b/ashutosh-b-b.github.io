@@ -2,7 +2,7 @@
 
 .blogs-main-container{
     width: 80%;
-    height: 100vw;
+    /* height: 100vw; */
     display: flex;
     margin-left : 10%;
     margin-right : 10%;
@@ -130,7 +130,8 @@
       scrollbar-width: none;  /* Firefox */
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
+      -ms-scroll-snap-type: x mandatory;
+          scroll-snap-type: x mandatory;
       margin-top: 2%;
       height: 60vw;
       width: 100%;

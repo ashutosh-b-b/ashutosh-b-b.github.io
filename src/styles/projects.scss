@@ -224,7 +224,7 @@
     transition: transform 0.5s;
     
     @supports(filter: url('#goo')) {
-      transform: translate3d(0,150%,0) scale(1.4);
+      transform: translate3d(0,150%,0) scale(1.7);
     }
     
     @for $i from 1 through $numOfBlobs {
@@ -237,7 +237,7 @@
     .blob-btn:hover & {
       transform: translateZ(0) scale(1.7);
       @supports(filter: url('#goo')) {
-        transform: translateZ(0) scale(1.4);
+        transform: translateZ(0) scale(1.7);
       }
     }
   }
@@ -252,43 +252,54 @@
     color: black;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width:768px) {
   .project-main{
     height: 120vw;
     width: 80%;
-    margin: 10%;
+    // margin: 10%;
   }
   .projects-container{
     height: 90vw;
-    width: 107.5%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    // -webkit-box-pack: center;
+    //     -ms-flex-pack: center;
+    //         justify-content: center;
     overflow-x:auto;
     overflow-y: hidden;
-    // flex-shrink: 0;
+    align-items: flex-start;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    margin-right: 10%;
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    margin-right: 0%;
   }
 
   .card{
-    width: 80%;
+    width: 90%;
     height: 100%;
-    // margin-top: 10%;
-    // margin-bottom:  10%;
+    margin-top: 10%;
+    margin-bottom:  10%;
     margin: 10%;
-    transform-origin: center center;
+    margin-right: 10%;
+    // transform-origin: center center;
     transform: scale(1);
     transition: transform 0.5s;
     position: relative;
+    flex-shrink: 0;
   }
   #last-project{
-    margin-right: 10%;
+    margin-right: 5%;
   }
   #first-project{
     margin-left: 5%;
@@ -416,7 +427,7 @@
   
   @supports (filter: url('#goo')) {
     .blob-btn__blob {
-      transform: translate3d(0, 150%, 0) scale(1.4);
+      transform: translate3d(0, 150%, 0) scale(1.7);
     }
   }
   
@@ -456,7 +467,7 @@
   
   @supports (filter: url('#goo')) {
     .blob-btn.hover {
-      transform: translateZ(0) scale(1.1);
+      transform: translateZ(0) scale(1.0);
     }
   }
   .blob-btn.hover .card-head{
