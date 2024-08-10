@@ -62,10 +62,10 @@
     .hero-container{
         display: flex;
         flex-direction: row;
-        height: 80vw;
+        height: 70vw;
     }
     .about-me-container{
-        height: 80vw;
+        height: 70vw;
         width: 65%;
     }
     .namaste{
