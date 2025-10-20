@@ -1,0 +1,53 @@
+{
+    "items":[
+        {
+            "id": 1,
+            "title": "D2L Julia",
+            "shortDesc": "An implementation of Dive into Deep Learning book in Julia.",
+            "displayImg": "projectsLogos/d2llogo.svg",
+            "fullDesc": "projectsMD/d2ljulia.md",
+            "displayAsset": "assets/projects/d2l-480p.gif",
+            "displayAssetType": "gif",
+            "skills": ["PyTorch", "Julia", "Deep Learning", "Machine Learning"],
+            "github": "https://github.com/ashutosh-b-b/d2l-julia",
+            "demo": "https://www.ashutoshbb.me/d2l-julia/dev/"
+        },
+        {
+            "id": 2,
+            "title": "SeeFood",
+            "shortDesc": "A Full-Stack Indian Food Recognition & Nutrition App",
+            "displayImg": "projectsLogos/seefoodlogo12.svg",
+            "fullDesc": "projectsMD/seefood.md",
+            "displayAsset": "https://raw.githubusercontent.com/ashutosh-b-b/SeeFood/refs/heads/main/assets/seefood.gif",
+            "displayAssetType": "gif-mobile",
+            "skills": ["PyTorch", "MLFlow", "FastAPI", "ReactJS", "Deep Learning"],
+            "github": "https://github.com/ashutosh-b-b/seefood",
+            "demo": ""
+        },
+        {
+            "id": 3,
+            "title": "HighDimPDE.jl",
+            "shortDesc": "A Julia Package for High-Dimensional PDEs with Deep Learning",
+            "displayImg": "projectsLogos/highdimpde.png",
+            "fullDesc": "projectsMD/highdimpde.md",
+            "displayAsset": "https://www.youtube-nocookie.com/embed/Aet3wSpG07o?si=4eOrfAMl1cLAmLMB&amp;controls=0&amp;start=2",
+            "displayAssetType": "yt-video",
+            "skills": ["PyTorch", "MLFlow", "FastAPI", "ReactJS", "Deep Learning"],
+            "github": "https://github.com/SciML/HighDimPDE.jl",
+            "demo": ""
+        },
+        {
+            "id": 4,
+            "title": "NightsWatch",
+            "shortDesc": "A Full-Stack Regression Tracking Dashboard",
+            "displayImg": "projectsLogos/nightswatch.svg",
+            "fullDesc": "projectsMD/nightswatch.md",
+            "displayAsset": "https://raw.githubusercontent.com/ashutosh-b-b/NightsWatch/refs/heads/master/assets/NightsWatch.gif",
+            "displayAssetType": "gif",
+            "skills": ["PyTorch", "MLFlow", "FastAPI", "ReactJS", "Deep Learning"],
+            "github": "https://github.com/ashutosh-b-b/NightsWatch",
+            "demo": ""
+        }
+
+    ]
+}
