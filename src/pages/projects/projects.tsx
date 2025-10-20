@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Projects.css'; 
+import './projects.css'; 
 import Markdown from 'react-markdown'
 import projectsData from '../../assets/projects/projectsData.json';
 
