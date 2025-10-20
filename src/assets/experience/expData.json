@@ -1,0 +1,32 @@
+{
+    "items":[
+        {
+            "year": "2022-Present",
+            "title": "JuliaHub",
+            "role": "AI Engineer/ Researcher",
+            "short-desc": "Worked on AI agents, Time Series Dynamical Systems Prediction and more.",
+            "full-desc": "JD/juliahub.md"
+        },
+        {
+            "year": "2022-Present",
+            "title": "Google Summer Of Code",
+            "role": "Student Developer",
+            "short-desc": "Worked on symbolic integration in Julia Symbolics and NeuralPDE enhancements",
+            "full-desc": "JD/gsoc.md"
+        },
+        {
+        "year": "2022-Present",
+        "title": "Cisco Systems",
+        "role": "Software Engineering Intern",
+        "short-desc": "Worked on Router failure prediction",
+        "full-desc": "JD/cisco.md"
+        },
+        {
+        "year": "2022-Present",
+        "title": "Julia Seasons of Code",
+        "role": "Student Developer",
+        "short-desc": "High Dimensional PDE solvers",
+        "full-desc": "JD/jsoc.md"
+        }
+    ]
+}
