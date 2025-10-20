@@ -25,6 +25,9 @@ export default function Lander(){
     const handleViewPortfolio = () => {
         window.open('#experience', '_self');
     };
+    const handleSocial = (url: string) => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+    }
     return(
        <div id="home" className="main-container">
             <div className="lander-container">
@@ -44,9 +47,9 @@ export default function Lander(){
                             {data.description}
                         </div>
                         <div className='lander-intro-socials'>
-                            <div className='github-container'></div>
-                            <div className='linkedin-container'></div>
-                            <div className='email-container'></div>
+                            <div className='github-container' onClick={() => handleSocial(data.socials.github || '')}></div>
+                            <div className='linkedin-container' onClick={() => handleSocial(data.socials.linkedin || '')}></div>
+                            <div className='email-container' onClick={() => handleSocial(data.socials.email || '')}></div>
                         </div>
                     </div>
                 </div>
