@@ -17,8 +17,14 @@ interface HeroData {
 }
 // const heroJSON: string = ;
 const data: HeroData = UserHeroData as HeroData;
-
+const resumeURL = "https://drive.google.com/file/d/1W7mjLpfiO9ujvh8yTcQVe25fZmWtVjX9/view?usp=sharing"
 export default function Lander(){
+    const handleViewResume = () => {
+        window.open(resumeURL, '_blank', 'noopener,noreferrer');
+    };
+    const handleViewPortfolio = () => {
+        window.open('#experience', '_self');
+    };
     return(
        <div id="home" className="main-container">
             <div className="lander-container">
@@ -47,10 +53,10 @@ export default function Lander(){
             </div>
             <div className='lander-btn-container-wrapper'>
                 <div className='lander-btn-container'>
-                    <div className='lander-btn'>
+                    <div className='lander-btn' onClick={handleViewPortfolio}>
                         View PortFolio
                     </div>
-                    <div className='lander-btn'>
+                    <div className='lander-btn' onClick={handleViewResume}>
                         View Resume
                     </div>
                 </div>
