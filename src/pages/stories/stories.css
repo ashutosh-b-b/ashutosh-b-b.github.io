@@ -11,7 +11,7 @@
 .carousel-container {
   min-height: 100vh;
   height: 100vh;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   display: flex;
   align-items: center;
   justify-content: center;
